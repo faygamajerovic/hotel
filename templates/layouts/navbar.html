@@ -18,6 +18,10 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link" href={% url 'list-hotels' %}>Hotels</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" href={% url 'contact' %}>Reviews</a>
           </li>
 
@@ -31,6 +35,8 @@
 
 
           {% if request.user.is_authenticated %}
+
+          <span class="text-light">Welcome {{request.user}}</span>
 
           <a href={% url 'logout' %} class="btn btn-danger mx-2" >Logout</a>
           {% else %}
